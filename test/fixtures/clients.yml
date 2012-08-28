@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  dogovor: MyString
+  lic_schet: 1
+  status: 1
+  descr: MyText
+
+two:
+  name: MyString
+  dogovor: MyString
+  lic_schet: 1
+  status: 1
+  descr: MyText
