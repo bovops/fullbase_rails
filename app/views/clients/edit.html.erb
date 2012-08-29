@@ -1,8 +1,10 @@
 <h1>Редактирование клиента</h1>
 
 <%= form_for(@client) do |f| %>
+  <%= f.submit "Сохранить" %> 
+  <%= link_to "delete", @client, :method => :delete, :confirm => "Вы уверены?",
+                                :title => "Удалить #{@client.name}" %>
   <%= render 'fields', :f => f %>
-  <div class="actions">
-    <%= f.submit "Сохранить" %>
+  <div class="actions"> 
   </div>
 <% end %>

@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Client < ActiveRecord::Base
   attr_accessible :descr, :dogovor, :lic_schet, :name, :status
 
@@ -12,5 +14,10 @@ class Client < ActiveRecord::Base
   validates :lic_schet,	:length		=> { :maximum => 10 }
 
   validates :status,	:length		=> { :maximum => 1 }
+
+  def get_status_display
+  	return 'Приостановлен' if self.status == 0
+  	return 'Активен' if self.status == 1
+  end
 
 end

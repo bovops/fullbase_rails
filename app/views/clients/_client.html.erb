@@ -1,5 +1,5 @@
 <tr>
-  <td>
-    <%= link_to client.name, client %>
-  </td>
+  <td><%= link_to client.name, edit_client_path(client.id) %></td>
+  <td><%= "#{client.dogovor} (#{client.get_status_display})" %></td>
+  <td><%= client.lic_schet %></td>
 </tr>
