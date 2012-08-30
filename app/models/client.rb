@@ -15,6 +15,8 @@ class Client < ActiveRecord::Base
 
   validates :status,	:length		=> { :maximum => 1 }
 
+  scope :active, where("status = 1")
+
   def get_status_display
   	return 'Приостановлен' if self.status == 0
   	return 'Активен' if self.status == 1

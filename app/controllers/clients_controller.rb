@@ -5,6 +5,10 @@ class ClientsController < ApplicationController
   def index
   	@title = "Список клиентов"
   	@clients = Client.paginate(:page => params[:page])
+
+    if params[:status]
+      @clients = @clients.where(:status => (params[:status] == "1"))
+    end
   end
 
   def show
@@ -37,7 +41,7 @@ class ClientsController < ApplicationController
   	@client = Client.find(params[:id])
   	if @client.update_attributes(params[:client])
   	  flash[:success] = 'Данные обновлены'
-  	  redirect_to @client
+  	  redirect_to edit_client_path(@client)
   	else
   	  @title = 'Редактирование клиента'
   	  render 'edit'

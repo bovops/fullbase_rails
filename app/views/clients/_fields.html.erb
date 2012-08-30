@@ -17,5 +17,5 @@
 </div>
 <div class="field">
   <%= f.label :status %><br />
-  <%= f.text_field :status %>
+  <%= f.select(:status, options_for_select([['Приостановлен', 0], ['Активен', 1]], f.object.status)) %>
 </div>
