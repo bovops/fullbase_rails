@@ -3,6 +3,8 @@
 class Client < ActiveRecord::Base
   attr_accessible :descr, :dogovor, :lic_schet, :name, :status
 
+  has_many :numbers
+
   validates :name,	:presence 	=> true,
   					:length		=> { :maximum => 100 },
   					:uniqueness	=> { :case_sensitive => false }

@@ -1,0 +1,10 @@
+<h1>Редактирование номера</h1>
+
+<%= form_for(@number) do |f| %>
+  <%= f.submit "Сохранить" %> 
+  <%= link_to "delete", @number, :method => :delete, :confirm => "Вы уверены?",
+                                :title => "Удалить #{@number.number}" %>
+  <%= render 'fields', :f => f %>
+  <div class="actions"> 
+  </div>
+<% end %>

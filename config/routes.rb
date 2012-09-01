@@ -1,4 +1,5 @@
 FullbaseRails::Application.routes.draw do
+  resources :numbers
   resources :clients
 
   # The priority is based upon order of creation:
