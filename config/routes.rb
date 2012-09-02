@@ -51,7 +51,7 @@ FullbaseRails::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'clients#index'
+  root :to => redirect("/clients")
 
   # See how all your routes lay out with "rake routes"
 
