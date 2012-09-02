@@ -1,4 +1,4 @@
 <tr>
   <td><%= link_to number.number, edit_number_path(number.id) %></td>
-  <td><%= "#{number.client.name}" %></td>
+  <td><%= "#{number.client.name}" if number.client %></td>
 </tr>

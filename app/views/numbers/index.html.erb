@@ -1,6 +1,6 @@
 <h1>Список телефонных номеров</h1>
 
-<%= page_navigation_links @numbers %>
+<%= will_paginate @numbers, :renderer => BootstrapPagination::Rails %>
 
 <div class="row">
   <div class="span12">
@@ -18,4 +18,4 @@
   </div>
 </div>
 
-<%= page_navigation_links @numbers %>
+<%= will_paginate @numbers, :renderer => BootstrapPagination::Rails %>

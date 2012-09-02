@@ -1,0 +1,6 @@
+ru:
+  hello: "Привет, мир!!!"
+
+  will_paginate:
+    previous_label: "&#8592; Предыдущая"
+    next_label: "Следующая &#8594;"
