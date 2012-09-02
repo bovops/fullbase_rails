@@ -1,9 +1,12 @@
 <h1>Редактирование номера</h1>
 
-<%= form_for(@number) do |f| %>
-  <%= f.submit "Сохранить" %> 
-  <%= link_to "delete", @number, :method => :delete, :confirm => "Вы уверены?",
-                                :title => "Удалить #{@number.number}" %>
+<%= form_for(@number, :html => {:class => "form-horizontal"}) do |f| %>
+  <div class="pull-right">
+    <%= f.submit "Сохранить", :class => "btn btn-primary" %> 
+
+    <%= link_to "Удалить", @number, :method => :delete, :confirm => "Вы уверены?",
+                                :title => "Удалить #{@number.number}", :class => "btn btn-danger" %>
+  </div>
   <%= render 'fields', :f => f %>
   <div class="actions"> 
   </div>

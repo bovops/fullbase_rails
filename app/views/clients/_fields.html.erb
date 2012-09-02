@@ -1,21 +1,41 @@
 <%= render 'shared/error_messages', :object => f.object %>
-<div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
+<div class="control-group">
+  <div class="control-label">
+    <%= f.label :name %>
+  </div>
+  <div class="controls">
+    <%= f.text_field :name %>
+  </div>
 </div>
-<div class="field">
-  <%= f.label :dogovor %><br />
-  <%= f.text_field :dogovor %>
+<div class="control-group">
+  <div class="control-label">
+    <%= f.label :dogovor %>
+  </div>
+  <div class="controls">
+    <%= f.text_field :dogovor %>
+  </div>
 </div>
-<div class="field">
-  <%= f.label :lic_schet %><br />
-  <%= f.text_field :lic_schet %>
+<div class="control-group">
+  <div class="control-label">
+    <%= f.label :lic_schet %>
+  </div>
+  <div class="controls">
+    <%= f.text_field :lic_schet %>
+  </div>
 </div>
-<div class="field">
-  <%= f.label :descr %><br />
-  <%= f.text_field :descr %>
+<div class="control-group">
+  <div class="control-label">
+    <%= f.label :descr %>
+  </div>
+  <div class="controls">
+    <%= f.text_area :descr, :rows => "3" %>
+  </div>
 </div>
-<div class="field">
-  <%= f.label :status %><br />
-  <%= f.select(:status, options_for_select([['Приостановлен', 0], ['Активен', 1]], f.object.status)) %>
+<div class="control-group">
+  <div class="control-label">
+    <%= f.label :status %>
+  </div>
+  <div class="controls">
+    <%= f.select(:status, options_for_select([['Приостановлен', 0], ['Активен', 1]], f.object.status)) %>
+  </div>
 </div>

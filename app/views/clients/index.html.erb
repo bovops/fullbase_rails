@@ -1,5 +1,7 @@
 <h1>Список клиентов</h1>
 
+<% render 'filters' %>
+
 <%= will_paginate @clients, :renderer => BootstrapPagination::Rails %>
 
 <div class="row">

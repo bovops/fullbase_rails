@@ -1,9 +1,11 @@
 <h1>Редактирование клиента</h1>
 
-<%= form_for(@client) do |f| %>
-  <%= f.submit "Сохранить" %> 
-  <%= link_to "delete", @client, :method => :delete, :confirm => "Вы уверены?",
-                                :title => "Удалить #{@client.name}" %>
+<%= form_for @client, :html => {:class => "form-horizontal"} do |f| %>
+  <div class="pull-right">
+    <%= f.submit "Сохранить", :class => "btn btn-primary" %> 
+    <%= link_to "Удалить", @client, :method => :delete, :confirm => "Вы уверены?",
+                                  :title => "Удалить #{@client.name}", :class => "btn btn-danger" %>
+  </div>
   <%= render 'fields', :f => f %>
   <div class="actions"> 
   </div>

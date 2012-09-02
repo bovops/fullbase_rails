@@ -1,9 +1,17 @@
 <%= render 'shared/error_messages', :object => f.object %>
-<div class="field">
-  <%= f.label :number %><br />
-  <%= f.text_field :number %>
+<div class="control-group">
+  <div class="control-label">
+    <%= f.label :number %>
+  </div>
+  <div class="controls">
+    <%= f.text_field :number %>
+  </div>
 </div>
-<div class="field">
-  <%= f.label :client_id %><br />
-  <%= f.select(:client_id, Client.all.map { |client| [client.name, client.id] } ) %>
+<div class="control-group">
+  <div class="control-label">
+    <%= f.label :client_id %>
+  </div>
+  <div class="controls">
+    <%= f.select(:client_id, ['----'] + Client.all.map { |client| [client.name, client.id] } ) %>
+  </div>
 </div>
