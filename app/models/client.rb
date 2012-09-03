@@ -24,6 +24,4 @@ class Client < ActiveRecord::Base
   	return 'Активен' if self.status == 1
   end
 
-  def test
-  end
 end
