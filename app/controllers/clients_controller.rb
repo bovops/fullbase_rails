@@ -3,7 +3,7 @@
 class ClientsController < ApplicationController
 
   def index
-  	@title = "Список клиентов"
+  	@title = 'Список клиентов'
   	@clients = Client.paginate(:page => params[:page])
 
     if params[:status]
@@ -18,16 +18,16 @@ class ClientsController < ApplicationController
 
   def new
   	@client = Client.new
-  	@title = "Добавление клиента"
+  	@title = 'Добавление клиента'
   end
 
   def create
   	@client = Client.new(params[:client])
   	if @client.save
-  	  flash[:success] = 'Клиент успешно добавлен'
+  	  flash[:notice] = 'Клиент успешно добавлен'
   	  redirect_to clients_path
   	else
-  	  @title = "Добавление клиента"
+  	  @title = 'Добавление клиента'
   	  render 'new'
   	end
   end
@@ -40,7 +40,7 @@ class ClientsController < ApplicationController
   def update
   	@client = Client.find(params[:id])
   	if @client.update_attributes(params[:client])
-  	  flash[:success] = 'Данные обновлены'
+  	  flash[:notice] = 'Данные обновлены'
   	  redirect_to edit_client_path(@client)
   	else
   	  @title = 'Редактирование клиента'
@@ -50,7 +50,7 @@ class ClientsController < ApplicationController
 
   def destroy
   	Client.find(params[:id]).destroy
-  	flash[:success] = 'Клиент удален'
+  	flash[:notice] = 'Клиент удален'
   	redirect_to clients_path
   end
 

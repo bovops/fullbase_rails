@@ -1,0 +1,11 @@
+<h1>Добавить клиента</h1>
+
+<%= form_for @client, :html => {:class => "form-horizontal"} do |f| %>
+  <div class="row">
+    <div class="pull-right">
+      <%= f.submit "Добавить", :class => "btn btn-primary" %> 
+      <%= link_to "Отмена", clients_path, :class => "btn" %>
+    </div>
+  </div>
+  <%= render 'fields', :f => f %>
+<% end %>

@@ -1,7 +1,11 @@
 <h1>Список телефонных номеров</h1>
 
 <%= will_paginate @numbers, :renderer => BootstrapPagination::Rails %>
-
+<div class="row">
+  <div class="pull-right">
+    <%= link_to "Добавить Номер", new_number_path, :class => "btn btn-primary" %>
+  </div>
+</div>
 <div class="row">
   <div class="span12">
   	<table class="table table-striped table-condensed">

@@ -3,7 +3,11 @@
 <% render 'filters' %>
 
 <%= will_paginate @clients, :renderer => BootstrapPagination::Rails %>
-
+<div class="row">
+  <div class="pull-right">
+    <%= link_to "Добавить клиента", new_client_path, :class => "btn btn-primary" %>
+  </div>
+</div>
 <div class="row">
   <div class="span12">
   	<table class="table table-striped table-condensed">
