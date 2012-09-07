@@ -1,2 +1,8 @@
-<h1>Numbers#show</h1>
-<p>Find me in app/views/numbers/show.html.erb</p>
+<table>
+  <tr>
+    <th>Номер:</th> <td><%= @number.number %></td>
+  </tr>
+  <tr>
+    <th>Клиент:</th> <td><%= @number.client.name if @number.client %></td>
+  </tr>
+</table>
